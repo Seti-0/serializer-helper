@@ -43,6 +43,8 @@
       <HintPath>..\..\..\DualityEditor.exe</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Xml" />
     <Reference Include="WeifenLuo.WinFormsUI.Docking">
@@ -53,8 +55,54 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EditorActions\Inspect.cs" />
+    <Compile Include="EditorActions\Resave.cs" />
     <Compile Include="EditorPlugin.cs" />
+    <Compile Include="Forms\InspectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InspectionDialog.designer.cs">
+      <DependentUpon>InspectionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SelectTypeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SelectTypeDialog.designer.cs">
+      <DependentUpon>SelectTypeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TreeModels\Base\SortedTreeItem.cs" />
+    <Compile Include="Forms\TreeModels\Base\SortedTreeModel.cs" />
+    <Compile Include="Forms\TreeModels\Base\SortedTreeNode.cs" />
+    <Compile Include="Forms\TreeModels\StringHelper.cs" />
+    <Compile Include="Forms\TreeModels\TypeTreeItem.cs" />
+    <Compile Include="Forms\TreeModels\TypeTreeModel.cs" />
+    <Compile Include="Forms\TreeModels\TypeTreeNode.cs" />
+    <Compile Include="Forms\TreeModels\XmlTreeItem.cs" />
+    <Compile Include="Forms\TreeModels\XmlTreeModel.cs" />
+    <Compile Include="Forms\TreeModels\XmlTreeNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <DependentUpon>Resources.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Utility\TypeExtMethods.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Forms\InspectionDialog.resx">
+      <DependentUpon>InspectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SelectTypeDialog.resx">
+      <DependentUpon>SelectTypeDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\expand.png" />
+    <Content Include="Resources\expand_active.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- Copy all plugin binaries to the plugin folder -->
