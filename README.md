@@ -1,1 +1,1 @@
-Template repository for duality plugins. For now, just contains duality and a suitable .gitignore
+A tiny helper editor plugin for duality serialization. In the case of Duality not recognising a type (say if that type has been renamed/moved), it shows a dialog allowing the user to point Duality to the correct type. 
