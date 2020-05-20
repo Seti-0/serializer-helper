@@ -30,7 +30,7 @@ namespace Soulstone.Duality.Editor.Serialization.Forms
          */
 
 
-        private XmlTreeMdel _xmlModel;
+        private XmlTreeModel _xmlModel;
 
         private bool _expandAll = true;
 
@@ -90,7 +90,7 @@ namespace Soulstone.Duality.Editor.Serialization.Forms
 
             //txtNodeName.DrawText += treeNodeName_DrawText;
 
-            _xmlModel = new XmlTreeMdel(subject);
+            _xmlModel = new XmlTreeModel(subject);
             _xmlModel.Init();
             _xmlModel.Initialized += _typeModel_Initialized;
         }

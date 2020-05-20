@@ -8,8 +8,8 @@
     <ProjectGuid>{78DBC94D-EE9D-4AC0-95ED-91A0AE2F6652}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Duality_.Editor</RootNamespace>
-    <AssemblyName>GamePlugin.editor</AssemblyName>
+    <RootNamespace>Soulstone.Duality.Editor.Serialization</RootNamespace>
+    <AssemblyName>SoulstoneSerialization.editor</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

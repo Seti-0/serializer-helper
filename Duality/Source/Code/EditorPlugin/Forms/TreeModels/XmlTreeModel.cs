@@ -21,7 +21,7 @@ namespace Soulstone.Duality.Editor.Serialization
     /// <summary>
     /// Maintains a tree of Types from all loaded assemblies, and lazily evaluates filters.
     /// </summary>
-    public class XmlTreeMdel : SortedTreeModel<XmlTreeNode, XmlTreeItem>
+    public class XmlTreeModel : SortedTreeModel<XmlTreeNode, XmlTreeItem>
 	{
         private XElement _root;
 
@@ -30,7 +30,7 @@ namespace Soulstone.Duality.Editor.Serialization
             get { return "(Empty)"; }
         }
 
-		public XmlTreeMdel(XElement root)
+		public XmlTreeModel(XElement root)
 		{
             _root = root;
 		}
