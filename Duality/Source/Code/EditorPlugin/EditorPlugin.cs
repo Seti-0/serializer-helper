@@ -38,7 +38,7 @@ namespace Soulstone.Duality.Editor.Serialization
 
 		private void AssemblyLoader_AssemblyLoaded(object sender, global::Duality.Backend.AssemblyLoadedEventArgs e)
 		{
-			_dialog.Dispose();
+			_dialog?.Dispose();
 			_dialog = null;
 		}
 

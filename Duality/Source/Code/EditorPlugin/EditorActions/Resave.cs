@@ -31,6 +31,8 @@ namespace Soulstone.Duality.Editor.Serialization.EditorActions
             if (resource.IsRuntimeResource) return;
 
             resource.Save(resource.Path, true);
+
+            Logs.Editor.Write($"{resource.Name} resaved to '{resource.Path}'");
         }
     }
 }
