@@ -31,6 +31,7 @@ namespace Soulstone.Duality.Editor.Serialization.Forms
 
         private TypeTreeModel _typeModel = new TypeTreeModel();
         private Type _selectedType = null;
+        private bool _cancelAll = false;
 
         private bool _expandAll = true;
 
@@ -93,6 +94,11 @@ namespace Soulstone.Duality.Editor.Serialization.Forms
         public Type SelectedType
         {
             get { return _selectedType; }
+        }
+
+        public bool CancelAll
+        {
+            get { return _cancelAll; }
         }
 
         public SelectTypeDialog()
@@ -170,6 +176,14 @@ namespace Soulstone.Duality.Editor.Serialization.Forms
 
         private void buttonCancel_Click(object sender, EventArgs e)
         {
+            _selectedType = null;
+            DialogResult = DialogResult.Cancel;
+            Close();
+        }
+
+        private void buttonCancelAll_Click(object sender, EventArgs e)
+        {
+            _cancelAll = true;
             _selectedType = null;
             DialogResult = DialogResult.Cancel;
             Close();

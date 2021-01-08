@@ -19,12 +19,20 @@ namespace Soulstone.Duality.Editor.Serialization
 	/// </summary>
     public class Bable : EditorPlugin
 	{
+		private bool _active = true;
 		private SelectTypeDialog _dialog = null;
 
 		public override string Id
 		{
 			get { return "Soulstone.Duality.Editor.Serialization"; }
 		}
+
+		public bool Active
+        {
+			get { return _active; }
+
+			set { _active = value; }
+        }
 
 		protected override void InitPlugin(MainForm main)
 		{
@@ -56,6 +64,9 @@ namespace Soulstone.Duality.Editor.Serialization
 			if (e?.MemberId == null)
 				return;
 
+			if (!_active)
+				return;
+
 			if (_dialog == null)
 				_dialog = new SelectTypeDialog();
 
@@ -80,6 +91,11 @@ namespace Soulstone.Duality.Editor.Serialization
 			{
 				e.ResolvedMember = _dialog.SelectedType;
 			}
+
+			if (_dialog.CancelAll)
+            {
+				_active = false;
+            }
 		}
 	}
 }
